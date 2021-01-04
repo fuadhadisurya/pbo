@@ -2,11 +2,11 @@
 include '../config/Database.php';
 
 class loginModel extends Database{
-    function __construct (){
+    public function __construct (){
         parent::__construct();
     }
 
-    function cekLogin($username, $password){
+    public function cekLogin($username, $password){
         $data = mysqli_query($this->conn,"SELECT * FROM user WHERE username='$username'");
         $cek = mysqli_fetch_assoc($data);
 

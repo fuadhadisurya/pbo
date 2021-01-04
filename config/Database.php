@@ -6,7 +6,7 @@ class Database{
     var $db = "pbo";
     var $conn;
 
-    function __construct (){
+    public function __construct (){
         $conn = mysqli_connect($this->host, $this->uname, $this->password, $this->db);
         $this->conn = $conn;
     }
